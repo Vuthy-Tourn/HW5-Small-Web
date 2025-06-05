@@ -88,22 +88,18 @@ export function renderHome(): HTMLElement {
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
           ${createCategoryCard(
             "Fashion",
-            "👗",
             "https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
           )}
           ${createCategoryCard(
             "Home & Living",
-            "🏠",
             "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
           )}
           ${createCategoryCard(
             "Accessories",
-            "💎",
             "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
           )}
           ${createCategoryCard(
             "Lifestyle",
-            "✨",
             "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
           )}
         </div>
@@ -370,14 +366,13 @@ export function renderHome(): HTMLElement {
   return div;
 }
 
-function createCategoryCard(title:string, emoji:any, imageUrl:string) {
+function createCategoryCard(title: string, imageUrl: string) {
   return `
     <div class="category-card group cursor-pointer">
       <div class="relative overflow-hidden rounded-2xl aspect-square">
         <img src="${imageUrl}" alt="${title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
         <div class="category-overlay absolute inset-0 bg-black/40 group-hover:bg-gradient-to-br from-[#1649A1]/60 to-[#F35F25]/60 transition-all duration-500 flex items-center justify-center">
           <div class="text-center">
-            <div class="text-4xl mb-2">${emoji}</div>
             <h3 class="text-white font-bold text-lg">${title}</h3>
           </div>
         </div>

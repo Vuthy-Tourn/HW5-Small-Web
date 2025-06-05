@@ -4,8 +4,7 @@ import { renderHome } from "./pages/home";
 import { renderShop } from "./pages/shop";
 import { renderProductDetail } from "./pages/productDetail";
 import { renderAbout } from "./pages/about";
-// import { renderContact } from "./pages/contact";
-// import { renderService } from "./pages/service";
+import { renderContact } from "./pages/contact";
 // import { renderNotFound } from "./pages/notFound";
 
 let container: HTMLElement;
@@ -58,6 +57,9 @@ function handleRoute(path: string, updateHistory: boolean = true): void {
       break;
     case "/about":
       contentFn = renderAbout;
+      break;
+    case "/contact":
+      contentFn = renderContact;
       break;
     default:
       if (/^\/product\/\w+$/.test(path)) {

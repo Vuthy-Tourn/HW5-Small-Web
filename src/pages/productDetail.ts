@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 import { Product } from "../types/Type";
+
 export function renderProductDetail(productId: string): HTMLElement {
   const div = document.createElement("div");
   let product: Product | null = null;
@@ -8,27 +9,27 @@ export function renderProductDetail(productId: string): HTMLElement {
   let quantity = 1;
 
   div.innerHTML = `
-    <div class="min-h-screen dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 mt-20">
+    <div class="min-h-screen bg-white dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 mt-20">
       <!-- Loading Spinner -->
       <div id="loadingSpinner" class="flex justify-center items-center py-20">
-        <div class="animate-spin rounded-full h-12 w-12 border-4 border-[#1649A1] border-t-transparent"></div>
+        <div class="animate-spin rounded-full h-12 w-12 border-4 border-blue-600 dark:border-[#1649A1] border-t-transparent"></div>
       </div>
 
       <!-- Product Detail Content -->
       <div id="productContent" class="hidden">
         <!-- Navigation Bar -->
-        <nav class="bg-gray-800/50 backdrop-blur-sm border-b border-gray-700/50 ">
+        <nav class="bg-gray-100 dark:bg-gray-800/50 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700/50">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-              <button id="backButton" class="flex items-center text-white hover:text-[#F35F25] transition-colors duration-300">
+              <button id="backButton" class="flex items-center text-gray-700 dark:text-white hover:text-orange-500 dark:hover:text-[#F35F25] transition-colors duration-300">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                 </svg>
                 Back to Shop
               </button>
               
-              <div class="text-white font-semibold">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#1649A1] to-[#F35F25]">You&Me</span>
+              <div class="text-gray-800 dark:text-white font-semibold">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 dark:from-[#1649A1] dark:to-[#F35F25]">You&Me</span>
               </div>
             </div>
           </div>
@@ -37,14 +38,14 @@ export function renderProductDetail(productId: string): HTMLElement {
         <!-- Breadcrumb -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <nav class="text-sm">
-            <ol class="flex items-center space-x-2 text-gray-400">
-              <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
+            <ol class="flex items-center space-x-2 text-gray-500 dark:text-gray-400">
+              <li><a href="#" class="hover:text-gray-700 dark:hover:text-white transition-colors">Home</a></li>
               <li><span class="mx-2">/</span></li>
-              <li><a href="#" class="hover:text-white transition-colors">Shop</a></li>
+              <li><a href="#" class="hover:text-gray-700 dark:hover:text-white transition-colors">Shop</a></li>
               <li><span class="mx-2">/</span></li>
-              <li id="productCategory" class="hover:text-white transition-colors cursor-pointer"></li>
+              <li id="productCategory" class="hover:text-gray-700 dark:hover:text-white transition-colors cursor-pointer"></li>
               <li><span class="mx-2">/</span></li>
-              <li id="productTitle" class="text-white font-medium truncate max-w-xs"></li>
+              <li id="productTitle" class="text-gray-800 dark:text-white font-medium truncate max-w-xs"></li>
             </ol>
           </nav>
         </div>
@@ -56,7 +57,7 @@ export function renderProductDetail(productId: string): HTMLElement {
             <div class="space-y-4">
               <!-- Main Image -->
               <div class="relative group">
-                <div class="aspect-square bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700/50">
+                <div class="aspect-square bg-gray-100 dark:bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700/50">
                   <img 
                     id="mainImage" 
                     src="" 
@@ -94,37 +95,37 @@ export function renderProductDetail(productId: string): HTMLElement {
               <!-- Product Header -->
               <div>
                 <div class="flex items-center gap-2 mb-2">
-                  <span id="brandName" class="text-sm font-medium text-[#F35F25] bg-[#1649A1]/20 px-3 py-1 rounded-full"></span>
+                  <span id="brandName" class="text-sm font-medium text-orange-500 dark:text-[#F35F25] bg-blue-100 dark:bg-[#1649A1]/20 px-3 py-1 rounded-full"></span>
                   <div class="flex items-center">
                     <div id="ratingStars" class="flex items-center"></div>
-                    <span id="ratingText" class="ml-2 text-sm text-gray-400"></span>
+                    <span id="ratingText" class="ml-2 text-sm text-gray-500 dark:text-gray-400"></span>
                   </div>
                 </div>
-                <h1 id="productName" class="text-3xl font-bold text-white mb-4"></h1>
-                <p id="productDescription" class="text-gray-300 leading-relaxed"></p>
+                <h1 id="productName" class="text-3xl font-bold text-gray-800 dark:text-white mb-4"></h1>
+                <p id="productDescription" class="text-gray-600 dark:text-gray-300 leading-relaxed"></p>
               </div>
 
               <!-- Price Section -->
-              <div class="border-t border-gray-700/50 pt-6">
+              <div class="border-t border-gray-200 dark:border-gray-700/50 pt-6">
                 <div class="flex items-center gap-4 mb-4">
-                  <span id="currentPrice" class="text-3xl font-bold text-white"></span>
-                  <span id="originalPrice" class="text-xl text-gray-400 line-through"></span>
-                  <span id="discountBadge" class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium"></span>
+                  <span id="currentPrice" class="text-3xl font-bold text-gray-800 dark:text-white"></span>
+                  <span id="originalPrice" class="text-xl text-gray-500 dark:text-gray-400 line-through"></span>
+                  <span id="discountBadge" class="bg-green-100 dark:bg-green-500/20 text-green-600 dark:text-green-400 px-3 py-1 rounded-full text-sm font-medium"></span>
                 </div>
                 
                 <!-- Stock Status -->
                 <div id="stockStatus" class="flex items-center gap-2 mb-6">
                   <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span class="text-sm text-green-400">In Stock</span>
-                  <span id="stockCount" class="text-sm text-gray-400"></span>
+                  <span class="text-sm text-green-600 dark:text-green-400">In Stock</span>
+                  <span id="stockCount" class="text-sm text-gray-500 dark:text-gray-400"></span>
                 </div>
               </div>
 
               <!-- Quantity and Add to Cart -->
-              <div class="border-t border-gray-700/50 pt-6">
+              <div class="border-t border-gray-200 dark:border-gray-700/50 pt-6">
                 <div class="flex items-center gap-4 mb-6">
-                  <div class="flex items-center border border-gray-600 rounded-xl overflow-hidden">
-                    <button id="decreaseQty" class="px-4 py-3 bg-gray-700/50 hover:bg-gray-600 text-white transition-colors">
+                  <div class="flex items-center border border-gray-300 dark:border-gray-600 rounded-xl overflow-hidden">
+                    <button id="decreaseQty" class="px-4 py-3 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700/50 dark:hover:bg-gray-600 text-gray-800 dark:text-white transition-colors">
                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
                       </svg>
@@ -134,23 +135,23 @@ export function renderProductDetail(productId: string): HTMLElement {
                       type="number" 
                       value="1" 
                       min="1" 
-                      class="w-16 py-3 text-center bg-gray-700/50 text-white border-0 focus:outline-none focus:ring-0"
+                      class="w-16 py-3 text-center bg-white dark:bg-gray-700/50 text-gray-800 dark:text-white border-0 focus:outline-none focus:ring-0"
                     >
-                    <button id="increaseQty" class="px-4 py-3 bg-gray-700/50 hover:bg-gray-600 text-white transition-colors">
+                    <button id="increaseQty" class="px-4 py-3 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700/50 dark:hover:bg-gray-600 text-gray-800 dark:text-white transition-colors">
                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                       </svg>
                     </button>
                   </div>
                   
-                  <div class="text-sm text-gray-400">
-                    Total: <span id="totalPrice" class="text-white font-semibold">$0.00</span>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">
+                    Total: <span id="totalPrice" class="text-gray-800 dark:text-white font-semibold">$0.00</span>
                   </div>
                 </div>
 
                 <!-- Action Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4">
-                  <button id="addToCart" class="flex-1 bg-gradient-to-r from-[#1649A1] to-[#1649A1]/80 text-white py-4 px-8 rounded-xl font-semibold hover:from-[#1649A1]/90 hover:to-[#1649A1]/70 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#1649A1]/20">
+                  <button id="addToCart" class="flex-1 bg-gradient-to-r from-blue-600 to-blue-500/80 dark:from-[#1649A1] dark:to-[#1649A1]/80 text-white py-4 px-8 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-600/70 dark:hover:from-[#1649A1]/90 dark:hover:to-[#1649A1]/70 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/20 dark:shadow-[#1649A1]/20">
                     <span class="flex items-center justify-center gap-2">
                       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5H19"></path>
@@ -159,11 +160,11 @@ export function renderProductDetail(productId: string): HTMLElement {
                     </span>
                   </button>
                   
-                  <button id="buyNow" class="flex-1 bg-gradient-to-r from-[#F35F25] to-[#F35F25]/80 text-white py-4 px-8 rounded-xl font-semibold hover:from-[#F35F25]/90 hover:to-[#F35F25]/70 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#F35F25]/20">
+                  <button id="buyNow" class="flex-1 bg-gradient-to-r from-orange-500 to-orange-400/80 dark:from-[#F35F25] dark:to-[#F35F25]/80 text-white py-4 px-8 rounded-xl font-semibold hover:from-orange-600 hover:to-orange-500/70 dark:hover:from-[#F35F25]/90 dark:hover:to-[#F35F25]/70 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-orange-500/20 dark:shadow-[#F35F25]/20">
                     Buy Now
                   </button>
                   
-                  <button id="wishlist" class="p-4 border border-gray-600 rounded-xl text-gray-400 hover:text-[#F35F25] hover:border-[#F35F25] transition-all duration-300">
+                  <button id="wishlist" class="p-4 border border-gray-300 dark:border-gray-600 rounded-xl text-gray-500 dark:text-gray-400 hover:text-orange-500 dark:hover:text-[#F35F25] hover:border-orange-500 dark:hover:border-[#F35F25] transition-all duration-300">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                     </svg>
@@ -172,8 +173,8 @@ export function renderProductDetail(productId: string): HTMLElement {
               </div>
 
               <!-- Product Tags -->
-              <div id="productTags" class="border-t border-gray-700/50 pt-6">
-                <h3 class="text-sm font-medium text-gray-400 mb-3">Tags:</h3>
+              <div id="productTags" class="border-t border-gray-200 dark:border-gray-700/50 pt-6">
+                <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400 mb-3">Tags:</h3>
                 <div class="flex flex-wrap gap-2">
                   <!-- Tags will be inserted here -->
                 </div>
@@ -183,26 +184,24 @@ export function renderProductDetail(productId: string): HTMLElement {
 
           <!-- Product Tabs -->
           <div class="mt-16">
-            <div class="border-b border-gray-700/50">
+            <div class="border-b border-gray-200 dark:border-gray-700/50">
               <nav class="flex space-x-8">
-              <button id="specificationsTab" class="tab-button py-4 px-1 border-b-2 border-transparent text-gray-400 hover:text-white font-medium text-sm">
+                <button id="specificationsTab" class="tab-button py-4 px-1 border-b-2 border-blue-600 dark:border-[#1649A1] text-blue-600 dark:text-[#1649A1] font-medium text-sm">
                   Specifications
                 </button>
-                <button id="descriptionTab" class="tab-button py-4 px-1 border-b-2 border-[#1649A1] text-[#1649A1] font-medium text-sm">
+                <button id="descriptionTab" class="tab-button py-4 px-1 border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-white font-medium text-sm">
                   Description
                 </button>
-                <button id="reviewsTab" class="tab-button py-4 px-1 border-b-2 border-transparent text-gray-400 hover:text-white font-medium text-sm">
+                <button id="reviewsTab" class="tab-button py-4 px-1 border-b-2 border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-white font-medium text-sm">
                   Reviews <span id="reviewCount" class="ml-1"></span>
                 </button>
               </nav>
             </div>
 
-            
-              
             <!-- Tab Content -->
             <div class="py-8">
               <!-- Specifications Tab -->
-              <div id="specificationsContent" class="tab-content hidden">
+              <div id="specificationsContent" class="tab-content">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div id="specsList" class="space-y-4">
                     <!-- Specifications will be inserted here -->
@@ -211,9 +210,9 @@ export function renderProductDetail(productId: string): HTMLElement {
               </div>
               
               <!-- Description Tab -->
-              <div id="descriptionContent" class="tab-content">
-                <div class="prose prose-invert max-w-none">
-                  <p id="fullDescription" class="text-gray-300 leading-relaxed text-lg"></p>
+              <div id="descriptionContent" class="tab-content hidden">
+                <div class="prose max-w-none">
+                  <p id="fullDescription" class="text-gray-600 dark:text-gray-300 leading-relaxed text-lg"></p>
                 </div>
               </div>
 
@@ -231,9 +230,9 @@ export function renderProductDetail(productId: string): HTMLElement {
       <!-- Error State -->
       <div id="errorContent" class="hidden text-center py-20">
         <div class="text-6xl mb-4">⚠️</div>
-        <h3 class="text-2xl font-bold text-white mb-2">Product Not Found</h3>
-        <p class="text-gray-400 mb-6">The product you're looking for doesn't exist or has been removed.</p>
-        <button id="backToShop" class="bg-gradient-to-r from-[#1649A1] to-[#1649A1]/80 text-white py-3 px-6 rounded-xl font-semibold hover:from-[#1649A1]/90 hover:to-[#1649A1]/70 transition-all duration-300">
+        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Product Not Found</h3>
+        <p class="text-gray-500 dark:text-gray-400 mb-6">The product you're looking for doesn't exist or has been removed.</p>
+        <button id="backToShop" class="bg-gradient-to-r from-blue-600 to-blue-500/80 dark:from-[#1649A1] dark:to-[#1649A1]/80 text-white py-3 px-6 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-600/70 dark:hover:from-[#1649A1]/90 dark:hover:to-[#1649A1]/70 transition-all duration-300">
           Back to Shop
         </button>
       </div>
@@ -241,11 +240,21 @@ export function renderProductDetail(productId: string): HTMLElement {
 
     <style>
       .tab-button.active {
+        color: #2563eb;
+        border-color: #2563eb;
+      }
+      
+      .tab-button:hover:not(.active) {
+        color: #1e40af;
+        border-color: #d1d5db;
+      }
+      
+      .dark .tab-button.active {
         color: #1649A1;
         border-color: #1649A1;
       }
       
-      .tab-button:hover:not(.active) {
+      .dark .tab-button:hover:not(.active) {
         color: white;
         border-color: #374151;
       }
@@ -255,6 +264,11 @@ export function renderProductDetail(productId: string): HTMLElement {
       }
       
       .thumbnail-image.active {
+        border: 2px solid #2563eb;
+        box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
+      }
+      
+      .dark .thumbnail-image.active {
         border: 2px solid #1649A1;
         box-shadow: 0 0 10px rgba(22, 73, 161, 0.3);
       }
@@ -270,6 +284,7 @@ export function renderProductDetail(productId: string): HTMLElement {
     </style>
   `;
 
+  // [Rest of your existing JavaScript code remains exactly the same]
   // Initialize
   async function init() {
     await loadProduct();
@@ -342,7 +357,7 @@ export function renderProductDetail(productId: string): HTMLElement {
     if (product.stock === 0) {
       stockStatus.innerHTML = `
         <div class="w-2 h-2 bg-red-400 rounded-full"></div>
-        <span class="text-sm text-red-400">Out of Stock</span>
+        <span class="text-sm text-red-600 dark:text-red-400">Out of Stock</span>
       `;
     }
 
@@ -382,7 +397,7 @@ export function renderProductDetail(productId: string): HTMLElement {
     thumbnailContainer.innerHTML = images
       .map(
         (image, index) => `
-      <button class="thumbnail-image flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 border-gray-600 hover:border-[#1649A1] transition-all duration-300 ${
+      <button class="thumbnail-image flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 border-gray-300 dark:border-gray-600 hover:border-blue-500 dark:hover:border-[#1649A1] transition-all duration-300 ${
         index === 0 ? "active" : ""
       }" data-index="${index}">
         <img src="${image}" alt="${
@@ -451,7 +466,7 @@ export function renderProductDetail(productId: string): HTMLElement {
     // Empty stars
     for (let i = 0; i < emptyStars; i++) {
       starsHTML +=
-        '<svg class="w-4 h-4 text-gray-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>';
+        '<svg class="w-4 h-4 text-gray-300 dark:text-gray-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>';
     }
 
     ratingStars.innerHTML = starsHTML;
@@ -470,7 +485,7 @@ export function renderProductDetail(productId: string): HTMLElement {
       productTags.innerHTML = product.tags
         .map(
           (tag) => `
-        <span class="px-3 py-1 bg-gray-700/50 text-gray-300 rounded-full text-sm border border-gray-600 hover:border-[#1649A1] transition-colors duration-300">
+        <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-full text-sm border border-gray-300 dark:border-gray-600 hover:border-blue-500 dark:hover:border-[#1649A1] transition-colors duration-300">
           ${tag}
         </span>
       `
@@ -482,84 +497,102 @@ export function renderProductDetail(productId: string): HTMLElement {
     }
   }
 
- function renderSpecifications() {
-   if (!product) return;
+  function renderSpecifications() {
+    if (!product) return;
 
-   const specsList = document.querySelector("#specsList") as HTMLElement;
-   const descriptionContent = document.querySelector(
-     "#descriptionContent"
-   ) as HTMLElement;
-   const reviewsContent = document.querySelector(
-     "#reviewsContent"
-   ) as HTMLElement;
+    const specsList = div.querySelector("#specsList") as HTMLElement;
+    const descriptionContent = div.querySelector(
+      "#descriptionContent"
+    ) as HTMLElement;
+    const reviewsContent = div.querySelector("#reviewsContent") as HTMLElement;
 
-   // Show specs by default, hide others
-   specsList.style.display = "block";
-   descriptionContent.style.display = "none";
-   reviewsContent.style.display = "none";
+    // Show specs by default, hide others
+    specsList.style.display = "block";
+    descriptionContent.style.display = "none";
+    reviewsContent.style.display = "none";
 
-   const specs = [
-     { label: "Brand", value: product.brand },
-     { label: "Category", value: product.category },
-     { label: "Stock", value: product.stock.toString() },
-     { label: "Rating", value: `${product.rating}/5` },
-     { label: "Discount", value: `${product.discountPercentage}%` },
-   ];
+    const specs = [
+      { label: "Brand", value: product.brand },
+      { label: "Category", value: product.category },
+      { label: "Stock", value: product.stock.toString() },
+      { label: "Rating", value: `${product.rating}/5` },
+      { label: "Discount", value: `${product.discountPercentage}%` },
+    ];
 
-   specsList.innerHTML = specs
-     .map(
-       (spec) => `
-      <div class="flex justify-between py-3 border-b border-gray-700/50">
-        <span class="text-gray-400 font-medium">${spec.label}:</span>
-        <span class="text-white">${spec.value}</span>
+    specsList.innerHTML = specs
+      .map(
+        (spec) => `
+      <div class="flex justify-between py-3 border-b border-gray-200 dark:border-gray-700/50">
+        <span class="text-gray-500 dark:text-gray-400 font-medium">${spec.label}:</span>
+        <span class="text-gray-800 dark:text-white">${spec.value}</span>
       </div>
     `
-     )
-     .join("");
+      )
+      .join("");
 
-   // Tab switching functionality
-   const tabs = {
-     specifications: {
-       button: document.querySelector("#specificationsTab") as HTMLElement,
-       content: specsList,
-     },
-     description: {
-       button: document.querySelector("#descriptionTab") as HTMLElement,
-       content: descriptionContent,
-     },
-     reviews: {
-       button: document.querySelector("#reviewsTab") as HTMLElement,
-       content: reviewsContent,
-     },
-   };
+    // Tab switching functionality
+    const tabs = {
+      specifications: {
+        button: div.querySelector("#specificationsTab") as HTMLElement,
+        content: specsList,
+      },
+      description: {
+        button: div.querySelector("#descriptionTab") as HTMLElement,
+        content: descriptionContent,
+      },
+      reviews: {
+        button: div.querySelector("#reviewsTab") as HTMLElement,
+        content: reviewsContent,
+      },
+    };
 
-   // Set active tab styles
-   function setActiveTab(activeTab: keyof typeof tabs) {
-     Object.entries(tabs).forEach(([key, tab]) => {
-       if (key === activeTab) {
-         tab.button.classList.add("border-[#1649A1]", "text-[#1649A1]");
-         tab.button.classList.remove("border-transparent", "text-gray-400");
-         tab.content.style.display = "block";
-       } else {
-         tab.button.classList.remove("border-[#1649A1]", "text-[#1649A1]");
-         tab.button.classList.add("border-transparent", "text-gray-400");
-         tab.content.style.display = "none";
-       }
-     });
-   }
+    // Set active tab styles
+    function setActiveTab(activeTab: keyof typeof tabs) {
+      Object.entries(tabs).forEach(([key, tab]) => {
+        if (key === activeTab) {
+          tab.button.classList.add(
+            "border-blue-600",
+            "text-blue-600",
+            "dark:border-[#1649A1]",
+            "dark:text-[#1649A1]"
+          );
+          tab.button.classList.remove(
+            "border-transparent",
+            "text-gray-500",
+            "dark:text-gray-400"
+          );
+          tab.content.style.display = "block";
+        } else {
+          tab.button.classList.remove(
+            "border-blue-600",
+            "text-blue-600",
+            "dark:border-[#1649A1]",
+            "dark:text-[#1649A1]"
+          );
+          tab.button.classList.add(
+            "border-transparent",
+            "text-gray-500",
+            "dark:text-gray-400"
+          );
+          tab.content.style.display = "none";
+        }
+      });
+    }
 
-   // Event listeners for tabs
-   tabs.specifications.button.addEventListener("click", () =>
-     setActiveTab("specifications")
-   );
-   tabs.description.button.addEventListener("click", () =>
-     setActiveTab("description")
-   );
-   tabs.reviews.button.addEventListener("click", () => setActiveTab("reviews"));
+    // Event listeners for tabs
+    tabs.specifications.button.addEventListener("click", () =>
+      setActiveTab("specifications")
+    );
+    tabs.description.button.addEventListener("click", () =>
+      setActiveTab("description")
+    );
+    tabs.reviews.button.addEventListener("click", () =>
+      setActiveTab("reviews")
+    );
 
-   // Initialize with specs tab active
-   setActiveTab("specifications");
- }
+    // Initialize with specs tab active
+    setActiveTab("specifications");
+  }
 
   // Update total price
   function updateTotalPrice() {
@@ -710,8 +743,18 @@ export function renderProductDetail(productId: string): HTMLElement {
         // Remove active class from all tabs
         tabButtons.forEach((btn) => {
           btn.classList.remove("active");
-          btn.classList.add("text-gray-400", "hover:text-white");
-          btn.classList.remove("text-[#1649A1]", "border-[#1649A1]");
+          btn.classList.add(
+            "text-gray-500",
+            "dark:text-gray-400",
+            "hover:text-gray-700",
+            "dark:hover:text-white"
+          );
+          btn.classList.remove(
+            "text-blue-600",
+            "dark:text-[#1649A1]",
+            "border-blue-600",
+            "dark:border-[#1649A1]"
+          );
         });
 
         // Hide all tab contents
@@ -721,8 +764,18 @@ export function renderProductDetail(productId: string): HTMLElement {
 
         // Show selected tab
         button.classList.add("active");
-        button.classList.remove("text-gray-400", "hover:text-white");
-        button.classList.add("text-[#1649A1]");
+        button.classList.remove(
+          "text-gray-500",
+          "dark:text-gray-400",
+          "hover:text-gray-700",
+          "dark:hover:text-white"
+        );
+        button.classList.add(
+          "text-blue-600",
+          "dark:text-[#1649A1]",
+          "border-blue-600",
+          "dark:border-[#1649A1]"
+        );
 
         const targetContent = div.querySelector(`#${tabId}`);
         targetContent?.classList.remove("hidden");

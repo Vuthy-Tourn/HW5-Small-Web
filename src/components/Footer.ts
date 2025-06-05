@@ -18,7 +18,11 @@ export function Footer(): HTMLElement {
         <!-- Brand Column -->
         <div class="space-y-6">
           <a href="/" class="flex items-center space-x-2 group">
-              <img src="${darkMode ? "darkmode-logo.png" : "logo.png"}" 
+              <img src="${
+                darkMode
+                  ? "https://i.imgur.com/URPUqbe.png"
+                  : "https://i.imgur.com/zjmEKVY.png"
+              }"  
               id="theme-logo"
                    alt="Logo" 
                    class="h-24 w-24 transition-transform duration-300 group-hover:scale-105" />

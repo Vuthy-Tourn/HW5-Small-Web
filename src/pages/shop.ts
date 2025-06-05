@@ -1,7 +1,8 @@
 import createProductCard from "../components/ProductCard";
 import dotenv from "dotenv";
 dotenv.config();
-import { Product,ProductsResponse } from "../types/Type";
+import { Product, ProductsResponse } from "../types/Type";
+import { showSkeletonLoader } from "../components/SkeletonCard";
 export function renderShop(): HTMLElement {
   const div = document.createElement("div");
 
@@ -101,13 +102,9 @@ export function renderShop(): HTMLElement {
       <!-- Products Section -->
       <section class="py-8 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto gap-3">
-          <!-- Loading Spinner -->
-          <div id="loadingSpinner" class="flex justify-center items-center py-20">
-            <div class="animate-spin rounded-full h-12 w-12 border-4 border-[#1649A1] border-t-transparent"></div>
-          </div>
-          
           <!-- Products Grid -->
           <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Skeleton loading cards will be inserted here -->
           </div>
           
           <!-- No Results -->
@@ -131,38 +128,23 @@ export function renderShop(): HTMLElement {
         </div>
       </section>
     </div>
-
-    <style>
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-      
-      .product-card {
-        animation: fadeIn 0.5s ease-out;
-      }
-      
-      .product-card:hover .product-image {
-        transform: scale(1.05);
-      }
-      
-      .filter-tag {
-        animation: fadeIn 0.3s ease-out;
-      }
-    </style>
   `;
 
   // Initialize the shop
   async function init() {
+    showSkeletonLoader();
     await loadProducts();
     setupEventListeners();
   }
+
+  // Show skeleton loading cards
+
 
   // Load products from DummyJSON API
   async function loadProducts(searchQuery?: string) {
     try {
       isLoading = true;
-      showLoader();
+      showSkeletonLoader();
 
       const limit = 200;
       const baseUrl = process.env.BASE_URL;
@@ -196,7 +178,6 @@ export function renderShop(): HTMLElement {
       showError();
     } finally {
       isLoading = false;
-      hideLoader();
     }
   }
 
@@ -241,7 +222,7 @@ export function renderShop(): HTMLElement {
         }
         currentPage = 1;
         applyLocalFilters();
-      }, 500);
+      }, 1000);
     });
 
     categoryFilter.addEventListener("change", applyLocalFilters);
@@ -442,16 +423,6 @@ export function renderShop(): HTMLElement {
         pageNumbers.appendChild(ellipsis);
       }
     }
-  }
-
-  // Utility functions
-  function showLoader() {
-    div.querySelector("#loadingSpinner")?.classList.remove("hidden");
-    div.querySelector("#productsGrid")?.classList.add("hidden");
-  }
-
-  function hideLoader() {
-    div.querySelector("#loadingSpinner")?.classList.add("hidden");
   }
 
   function showError() {
