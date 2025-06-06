@@ -1,15 +1,10 @@
 {
   "builds": [
     {
-      "src": "src/index.html",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "src": "package.json",
+      "use": "@vercel/static-build"
     }
   ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/dist/$1"
-    }
-  ]
+  "buildCommand": "npx parcel build src/index.html --dist-dir dist",
+  "outputDirectory": "dist"
 }
