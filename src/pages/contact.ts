@@ -2,12 +2,12 @@ export function renderContact(): HTMLElement {
   const div = document.createElement("div");
   div.innerHTML = `
     <!-- Hero Section -->
-    <section class="relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-20 px-4 sm:px-6 lg:px-8 h-screen">
+    <section class="relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-20 px-4 sm:px-6 lg:px-8 min-h-[80vh] flex items-center h-screen">
       <div class="absolute inset-0 opacity-20">
         <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
       </div>
       
-      <div class="max-w-7xl mx-auto relative z-10 text-center py-12 lg:py-24">
+      <div class="max-w-7xl mx-auto relative z-10 text-center w-full">
         <div class="space-y-8 animate-fade-in">
           <span class="inline-block px-4 py-2 text-sm font-medium text-[#F35F25] bg-[#1649A1]/20 rounded-full backdrop-blur-sm">
             Get in Touch
@@ -134,6 +134,7 @@ export function renderContact(): HTMLElement {
                 class="w-full px-8 py-4 bg-[#1649A1] rounded-xl text-white font-semibold hover:shadow-lg hover:shadow-[#1649A1]/30 transition-all duration-300 transform hover:-translate-y-1 group"
               >
                 Send Message
+                <span class="ml-2 group-hover:translate-x-1 inline-block transition-transform duration-300">→</span>
               </button>
             </form>
           </div>
@@ -177,7 +178,6 @@ export function renderContact(): HTMLElement {
                 "#F35F25"
               )}
             </div>
-            
           </div>
         </div>
       </div>
@@ -198,7 +198,7 @@ export function renderContact(): HTMLElement {
           </p>
         </div>
         
-        <div class="space-y-4">
+        <div class="space-y-4" id="faqContainer">
           ${createFAQItem(
             "How long does shipping take?",
             "We offer free standard shipping (5-7 business days) and express shipping (2-3 business days). International shipping typically takes 7-14 business days depending on your location."
@@ -236,17 +236,15 @@ export function renderContact(): HTMLElement {
         </div>
         
         <div class="bg-gradient-to-br from-[#1649A1]/10 to-[#F35F25]/10 rounded-2xl p-8 border border-[#1649A1]/20">
-          <div class="aspect-video bg-gray-200 dark:bg-gray-700 rounded-xl flex items-center justify-center">
-            <div class="text-center">
-              <div class="text-4xl mb-4">🗺️</div>
-              <h3 class="text-xl font-bold text-[#1649A1] mb-2">Interactive Map</h3>
-              <p class="text-gray-600 dark:text-gray-300">
-                123 Commerce Street, New York, NY 10001
-              </p>
-              <button class="mt-4 px-6 py-2 bg-[#1649A1] text-white rounded-lg hover:bg-[#1649A1]/90 transition-colors">
-                Get Directions
-              </button>
-            </div>
+          <div class="aspect-video bg-gray-200 dark:bg-gray-700 rounded-xl overflow-hidden">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.631404683731!2d104.89921187547291!3d11.57825984389149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951e96d257a6f%3A0x6b66703c5fc0c7cc!2sScience%20and%20Technology%20Advanced%20Development%20Co.%2C%20Ltd.!5e0!3m2!1sen!2skh!4v1749207996590!5m2!1sen!2skh" 
+              class="w-full h-full"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
         </div>
       </div>
@@ -262,6 +260,11 @@ export function renderContact(): HTMLElement {
       }
       .faq-item {
         cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .faq-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
       }
       .faq-content {
         max-height: 0;
@@ -269,11 +272,50 @@ export function renderContact(): HTMLElement {
         transition: max-height 0.3s ease-out;
       }
       .faq-content.active {
-        max-height: 200px;
+        max-height: 500px;
+      }
+      .faq-icon {
+        transition: transform 0.3s ease;
+      }
+      .faq-item.active .faq-icon {
+        transform: rotate(45deg);
       }
     </style>
   `;
 
+  // Add event listeners after DOM is created
+  setTimeout(() => {
+    const faqItems = div.querySelectorAll(".faq-item");
+    faqItems.forEach((item) => {
+      const header = item.querySelector(".p-6");
+      const content = item.querySelector(".faq-content");
+      const icon = item.querySelector(".faq-icon");
+
+      header?.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
+
+        // Close all other FAQs
+        faqItems.forEach((otherItem) => {
+          if (otherItem !== item) {
+            otherItem.classList.remove("active");
+            otherItem.querySelector(".faq-content")?.classList.remove("active");
+          }
+        });
+
+        // Toggle current item
+        item.classList.toggle("active");
+        content?.classList.toggle("active");
+      });
+    });
+
+    // Form submission handler
+    const contactForm = div.querySelector("#contactForm");
+    contactForm?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Thank you for your message! We will get back to you soon.");
+      (contactForm as HTMLFormElement).reset();
+    });
+  }, 0);
 
   return div;
 }
@@ -286,9 +328,9 @@ function createContactCard(
   color: string
 ): string {
   return `
-    <div class="bg-white dark:bg-gray-800/50 p-6 rounded-2xl hover:shadow-lg hover:shadow-[${color}]/10 transition-all duration-500 group border border-gray-200 dark:border-gray-700/50">
-      <div class="flex items-start space-x-4">
-        <div class="text-3xl group-hover:scale-110 transition-transform duration-300">${icon}</div>
+    <div class="bg-white dark:bg-gray-800/50 p-6 rounded-2xl hover:shadow-lg hover:shadow-[${color}]/10 transition-all duration-300 group border border-gray-200 dark:border-gray-700/50 hover:border-[${color}]/30">
+      <div class="flex items-start gap-4">
+        <span class="text-3xl group-hover:text-[${color}] transition-colors duration-300">${icon}</span>
         <div>
           <h3 class="text-lg font-bold text-[${color}] mb-2">${title}</h3>
           <p class="text-gray-900 dark:text-white font-medium">${line1}</p>
@@ -301,9 +343,9 @@ function createContactCard(
 
 function createFAQItem(question: string, answer: string): string {
   return `
-    <div class="faq-item bg-white dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700/50 overflow-hidden">
-      <div class="p-6 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors">
-        <h3 class="text-lg font-semibold text-[#1649A1]">${question}</h3>
+    <div class="faq-item bg-white dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700/50 overflow-hidden transition-all duration-200">
+      <div class="p-6 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700/30">
+        <h3 class="text-lg font-semibold text-[#1649A1] dark:text-[#5EA1FF]">${question}</h3>
         <span class="faq-icon text-2xl text-[#F35F25] font-bold">+</span>
       </div>
       <div class="faq-content">
@@ -314,4 +356,3 @@ function createFAQItem(question: string, answer: string): string {
     </div>
   `;
 }
-

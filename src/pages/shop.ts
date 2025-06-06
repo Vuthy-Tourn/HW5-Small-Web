@@ -222,7 +222,7 @@ export function renderShop(): HTMLElement {
         }
         currentPage = 1;
         applyLocalFilters();
-      }, 1000);
+      }, 2000);
     });
 
     categoryFilter.addEventListener("change", applyLocalFilters);

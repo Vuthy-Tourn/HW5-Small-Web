@@ -24,11 +24,15 @@ export function renderHome(): HTMLElement {
           </div>
           <div class="flex flex-col sm:flex-row gap-4">
             <button class="px-8 py-3.5 bg-gradient-to-r from-[#1649A1] to-[#1e5bb8] rounded-xl text-white font-semibold hover:shadow-lg hover:shadow-[#1649A1]/30 transition-all duration-300 transform hover:-translate-y-1 group">
-              Shop Now
+              <a href="/shop" class="flex items-center gap-2">
+            Shop Now
               <span class="ml-2 inline-block transition-transform group-hover:translate-x-1">🛍️</span>
-            </button>
+            </a>
+              </button>
             <button class="px-8 py-3.5 border border-[#F35F25] rounded-xl text-[#F35F25] font-semibold hover:bg-[#F35F25]/10 transition-all duration-300 backdrop-blur-sm">
-              Browse Collections
+              <a href="/shop" class="flex items-center gap-2">
+            Browse Collections
+             </a>
             </button>
           </div>
           <div class="flex flex-wrap items-center gap-6 pt-4">
@@ -270,10 +274,14 @@ export function renderHome(): HTMLElement {
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <button class="px-8 py-3.5 bg-[#1649A1] rounded-xl text-white font-semibold hover:shadow-lg hover:shadow-[#1649A1]/30 transition-all duration-300 transform hover:-translate-y-1">
-            Start Shopping
+            <a href="/shop" class="flex items-center gap-2">
+          Start Shopping
+          </a>
           </button>
           <button class="px-8 py-3.5 border border-[#F35F25] rounded-xl text-[#F35F25] font-semibold hover:bg-[#F35F25]/10 transition-all duration-300 backdrop-blur-sm">
-            Browse Catalog
+            <a href="/shop" class="flex items-center gap-2">
+          Browse Catalog
+           </a>
           </button>
         </div>
       </div>
