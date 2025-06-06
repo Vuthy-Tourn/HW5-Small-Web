@@ -6,5 +6,6 @@
     }
   ],
   "buildCommand": "npx parcel build src/index.html --dist-dir dist",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "rootDirectory": "."
 }
