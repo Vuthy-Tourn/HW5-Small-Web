@@ -160,11 +160,11 @@
       });
     }
   }
-})({"cQQDx":[function(require,module,exports,__globalThis) {
+})({"duBbf":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 1234;
+var HMR_SERVER_PORT = 59740;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -783,7 +783,7 @@ function navigateToProduct(productId) {
     navigate(`/product/${productId}`, false);
 }
 
-},{"./layout":"aUJjy","./pages/home":"l0Soh","./pages/shop":"aOXn6","./pages/productDetail":"a4A6L","./pages/about":"d8csY","./pages/contact":"a0XsK","@parcel/transformer-js/src/esmodule-helpers.js":"i42Im"}],"aUJjy":[function(require,module,exports,__globalThis) {
+},{"./layout":"aUJjy","./pages/home":"l0Soh","./pages/shop":"aOXn6","./pages/productDetail":"a4A6L","./pages/about":"d8csY","./pages/contact":"a0XsK","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"aUJjy":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "createLayout", ()=>createLayout);
@@ -798,7 +798,7 @@ function createLayout(contentFn) {
     app.append(header, content, footer);
 }
 
-},{"./components/Footer":"11wJK","./components/Header":"7fu8U","@parcel/transformer-js/src/esmodule-helpers.js":"i42Im"}],"11wJK":[function(require,module,exports,__globalThis) {
+},{"./components/Footer":"11wJK","./components/Header":"7fu8U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"11wJK":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Footer", ()=>Footer);
@@ -962,7 +962,7 @@ function Footer() {
     return footer;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"i42Im"}],"i42Im":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jnFvT":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -1206,7 +1206,7 @@ function Header() {
     return navbar;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"i42Im"}],"l0Soh":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"l0Soh":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "renderHome", ()=>renderHome);
@@ -1574,7 +1574,7 @@ function createTestimonialCard(review, name, title, avatar) {
   `;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"i42Im"}],"aOXn6":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"aOXn6":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "renderShop", ()=>renderShop);
@@ -1946,7 +1946,7 @@ function renderShop() {
     return div;
 }
 
-},{"../components/ProductCard":"8TwjV","dotenv":"5TE9A","../components/SkeletonCard":"9DDbE","@parcel/transformer-js/src/esmodule-helpers.js":"i42Im"}],"8TwjV":[function(require,module,exports,__globalThis) {
+},{"../components/ProductCard":"8TwjV","dotenv":"5TE9A","../components/SkeletonCard":"9DDbE","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"8TwjV":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>createProductCard);
@@ -2024,7 +2024,7 @@ function createProductCard(product) {
   `;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"i42Im"}],"5TE9A":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"5TE9A":[function(require,module,exports,__globalThis) {
 var process = require("a81606b34c5d81aa");
 var Buffer = require("41bceb7eaaabbe41").Buffer;
 const fs = require("3cedb41afbfb34c8");
@@ -2289,7 +2289,7 @@ module.exports.parse = DotenvModule.parse;
 module.exports.populate = DotenvModule.populate;
 module.exports = DotenvModule;
 
-},{"a81606b34c5d81aa":"euskh","41bceb7eaaabbe41":"bCaf4","3cedb41afbfb34c8":"3E3X6","24ed8c5da1e3fe5e":"gfVel","cbaad8186a70aa4e":"ghcMD","c2a78565a91e0a0d":"2iHsz","1e1923289a8e6904":"l06n3"}],"euskh":[function(require,module,exports,__globalThis) {
+},{"a81606b34c5d81aa":"euskh","41bceb7eaaabbe41":"bCaf4","3cedb41afbfb34c8":"eoH60","24ed8c5da1e3fe5e":"gfVel","cbaad8186a70aa4e":"ghcMD","c2a78565a91e0a0d":"2iHsz","1e1923289a8e6904":"l06n3"}],"euskh":[function(require,module,exports,__globalThis) {
 // shim for using process in browser
 var process = module.exports = {};
 // cached from whatever global is present so that test runners that stub it
@@ -4030,7 +4030,7 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
     buffer[offset + i - d] |= s * 128;
 };
 
-},{}],"3E3X6":[function(require,module,exports,__globalThis) {
+},{}],"eoH60":[function(require,module,exports,__globalThis) {
 "use strict";
 
 },{}],"gfVel":[function(require,module,exports,__globalThis) {
@@ -6323,7 +6323,7 @@ function indexOf(xs, x) {
     return -1;
 }
 
-},{"5cd4b65a2667f30e":"euskh","c152f2119aca4689":"1Gpx3","ee1c46a25703890d":"2RWD9","efffad1605c95e76":"bCaf4","f6690d8cb5f89003":"3E3X6","f8c4515e8234bd59":"6w2N4","2b842a435cfab72e":"hS4Er","6f90938893f80e4b":"6NPyE","daceb54799edbc39":"8K93h","6b2730f2f68f00ce":"9UN53","d53c82af0b49f760":"b2PPv","e7e497563ff3b269":"hebpI","746c700ae68bf97c":"gtnqb","7770a768738aeba9":"8gzfK"}],"2RWD9":[function(require,module,exports,__globalThis) {
+},{"5cd4b65a2667f30e":"euskh","c152f2119aca4689":"1Gpx3","ee1c46a25703890d":"2RWD9","efffad1605c95e76":"bCaf4","f6690d8cb5f89003":"eoH60","f8c4515e8234bd59":"6w2N4","2b842a435cfab72e":"hS4Er","6f90938893f80e4b":"6NPyE","daceb54799edbc39":"8K93h","6b2730f2f68f00ce":"9UN53","d53c82af0b49f760":"b2PPv","e7e497563ff3b269":"hebpI","746c700ae68bf97c":"gtnqb","7770a768738aeba9":"8gzfK"}],"2RWD9":[function(require,module,exports,__globalThis) {
 module.exports = require("256d09989820a7e9").EventEmitter;
 
 },{"256d09989820a7e9":"1Gpx3"}],"6w2N4":[function(require,module,exports,__globalThis) {
@@ -6572,7 +6572,7 @@ module.exports = /*#__PURE__*/ function() {
     return BufferList;
 }();
 
-},{"56f983784a0fab6f":"bCaf4","95cdcc9e77389728":"3E3X6"}],"hS4Er":[function(require,module,exports,__globalThis) {
+},{"56f983784a0fab6f":"bCaf4","95cdcc9e77389728":"eoH60"}],"hS4Er":[function(require,module,exports,__globalThis) {
 var process = require("688ab6a28ddb436d");
 'use strict';
 // undocumented cb() API, needed for core, not for public API
@@ -14950,7 +14950,7 @@ function findPrime(bits, gen) {
     };
 })(module, this);
 
-},{"a4b3a214327293bc":"3E3X6"}],"26qhT":[function(require,module,exports,__globalThis) {
+},{"a4b3a214327293bc":"eoH60"}],"26qhT":[function(require,module,exports,__globalThis) {
 var bn = require("31d279a7646d17e9");
 var brorand = require("1ed277e13aa258c6");
 function MillerRabin(rand) {
@@ -17727,7 +17727,7 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
     };
 })(module, this);
 
-},{"1a01f12e7676c433":"3E3X6"}],"h6ZAm":[function(require,module,exports,__globalThis) {
+},{"1a01f12e7676c433":"eoH60"}],"h6ZAm":[function(require,module,exports,__globalThis) {
 var r;
 module.exports = function rand(len) {
     if (!r) r = new Rand(null);
@@ -17773,7 +17773,7 @@ try {
     };
 } catch (e) {}
 
-},{"e8ad0674730919a8":"3E3X6"}],"bqWAa":[function(require,module,exports,__globalThis) {
+},{"e8ad0674730919a8":"eoH60"}],"bqWAa":[function(require,module,exports,__globalThis) {
 module.exports = JSON.parse("{\"modp1\":{\"gen\":\"02\",\"prime\":\"ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a63a3620ffffffffffffffff\"},\"modp2\":{\"gen\":\"02\",\"prime\":\"ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece65381ffffffffffffffff\"},\"modp5\":{\"gen\":\"02\",\"prime\":\"ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca237327ffffffffffffffff\"},\"modp14\":{\"gen\":\"02\",\"prime\":\"ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aacaa68ffffffffffffffff\"},\"modp15\":{\"gen\":\"02\",\"prime\":\"ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aaac42dad33170d04507a33a85521abdf1cba64ecfb850458dbef0a8aea71575d060c7db3970f85a6e1e4c7abf5ae8cdb0933d71e8c94e04a25619dcee3d2261ad2ee6bf12ffa06d98a0864d87602733ec86a64521f2b18177b200cbbe117577a615d6c770988c0bad946e208e24fa074e5ab3143db5bfce0fd108e4b82d120a93ad2caffffffffffffffff\"},\"modp16\":{\"gen\":\"02\",\"prime\":\"ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aaac42dad33170d04507a33a85521abdf1cba64ecfb850458dbef0a8aea71575d060c7db3970f85a6e1e4c7abf5ae8cdb0933d71e8c94e04a25619dcee3d2261ad2ee6bf12ffa06d98a0864d87602733ec86a64521f2b18177b200cbbe117577a615d6c770988c0bad946e208e24fa074e5ab3143db5bfce0fd108e4b82d120a92108011a723c12a787e6d788719a10bdba5b2699c327186af4e23c1a946834b6150bda2583e9ca2ad44ce8dbbbc2db04de8ef92e8efc141fbecaa6287c59474e6bc05d99b2964fa090c3a2233ba186515be7ed1f612970cee2d7afb81bdd762170481cd0069127d5b05aa993b4ea988d8fddc186ffb7dc90a6c08f4df435c934063199ffffffffffffffff\"},\"modp17\":{\"gen\":\"02\",\"prime\":\"ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aaac42dad33170d04507a33a85521abdf1cba64ecfb850458dbef0a8aea71575d060c7db3970f85a6e1e4c7abf5ae8cdb0933d71e8c94e04a25619dcee3d2261ad2ee6bf12ffa06d98a0864d87602733ec86a64521f2b18177b200cbbe117577a615d6c770988c0bad946e208e24fa074e5ab3143db5bfce0fd108e4b82d120a92108011a723c12a787e6d788719a10bdba5b2699c327186af4e23c1a946834b6150bda2583e9ca2ad44ce8dbbbc2db04de8ef92e8efc141fbecaa6287c59474e6bc05d99b2964fa090c3a2233ba186515be7ed1f612970cee2d7afb81bdd762170481cd0069127d5b05aa993b4ea988d8fddc186ffb7dc90a6c08f4df435c93402849236c3fab4d27c7026c1d4dcb2602646dec9751e763dba37bdf8ff9406ad9e530ee5db382f413001aeb06a53ed9027d831179727b0865a8918da3edbebcf9b14ed44ce6cbaced4bb1bdb7f1447e6cc254b332051512bd7af426fb8f401378cd2bf5983ca01c64b92ecf032ea15d1721d03f482d7ce6e74fef6d55e702f46980c82b5a84031900b1c9e59e7c97fbec7e8f323a97a7e36cc88be0f1d45b7ff585ac54bd407b22b4154aacc8f6d7ebf48e1d814cc5ed20f8037e0a79715eef29be32806a1d58bb7c5da76f550aa3d8a1fbff0eb19ccb1a313d55cda56c9ec2ef29632387fe8d76e3c0468043e8f663f4860ee12bf2d5b0b7474d6e694f91e6dcc4024ffffffffffffffff\"},\"modp18\":{\"gen\":\"02\",\"prime\":\"ffffffffffffffffc90fdaa22168c234c4c6628b80dc1cd129024e088a67cc74020bbea63b139b22514a08798e3404ddef9519b3cd3a431b302b0a6df25f14374fe1356d6d51c245e485b576625e7ec6f44c42e9a637ed6b0bff5cb6f406b7edee386bfb5a899fa5ae9f24117c4b1fe649286651ece45b3dc2007cb8a163bf0598da48361c55d39a69163fa8fd24cf5f83655d23dca3ad961c62f356208552bb9ed529077096966d670c354e4abc9804f1746c08ca18217c32905e462e36ce3be39e772c180e86039b2783a2ec07a28fb5c55df06f4c52c9de2bcbf6955817183995497cea956ae515d2261898fa051015728e5a8aaac42dad33170d04507a33a85521abdf1cba64ecfb850458dbef0a8aea71575d060c7db3970f85a6e1e4c7abf5ae8cdb0933d71e8c94e04a25619dcee3d2261ad2ee6bf12ffa06d98a0864d87602733ec86a64521f2b18177b200cbbe117577a615d6c770988c0bad946e208e24fa074e5ab3143db5bfce0fd108e4b82d120a92108011a723c12a787e6d788719a10bdba5b2699c327186af4e23c1a946834b6150bda2583e9ca2ad44ce8dbbbc2db04de8ef92e8efc141fbecaa6287c59474e6bc05d99b2964fa090c3a2233ba186515be7ed1f612970cee2d7afb81bdd762170481cd0069127d5b05aa993b4ea988d8fddc186ffb7dc90a6c08f4df435c93402849236c3fab4d27c7026c1d4dcb2602646dec9751e763dba37bdf8ff9406ad9e530ee5db382f413001aeb06a53ed9027d831179727b0865a8918da3edbebcf9b14ed44ce6cbaced4bb1bdb7f1447e6cc254b332051512bd7af426fb8f401378cd2bf5983ca01c64b92ecf032ea15d1721d03f482d7ce6e74fef6d55e702f46980c82b5a84031900b1c9e59e7c97fbec7e8f323a97a7e36cc88be0f1d45b7ff585ac54bd407b22b4154aacc8f6d7ebf48e1d814cc5ed20f8037e0a79715eef29be32806a1d58bb7c5da76f550aa3d8a1fbff0eb19ccb1a313d55cda56c9ec2ef29632387fe8d76e3c0468043e8f663f4860ee12bf2d5b0b7474d6e694f91e6dbe115974a3926f12fee5e438777cb6a932df8cd8bec4d073b931ba3bc832b68d9dd300741fa7bf8afc47ed2576f6936ba424663aab639c5ae4f5683423b4742bf1c978238f16cbe39d652de3fdb8befc848ad922222e04a4037c0713eb57a81a23f0c73473fc646cea306b4bcbc8862f8385ddfa9d4b7fa2c087e879683303ed5bdd3a062b3cf5b3a278a66d2a13f83f44f82ddf310ee074ab6a364597e899a0255dc164f31cc50846851df9ab48195ded7ea1b1d510bd7ee74d73faf36bc31ecfa268359046f4eb879f924009438b481c6cd7889a002ed5ee382bc9190da6fc026e479558e4475677e9aa9e3050e2765694dfc81f56e880b96e7160c980dd98edd3dfffffffffffffffff\"}}");
 
 },{}],"a3QyS":[function(require,module,exports,__globalThis) {
@@ -18845,7 +18845,7 @@ function indexOf(xs, x) {
     return -1;
 }
 
-},{"896ff8d56553f7a":"euskh","6a3257a5fd38b090":"9qilm","e90e9a84ea2f1bd2":"cKY1y","16782d660ac22e0c":"1Gpx3","9a34f23fa53f83f7":"1uuSg","1711a8218ab7e640":"37ZCw","aec0c91a1241db87":"gsKpS","19affa8ce41f090d":"9UN53","a4a723b7297c7152":"3E3X6","ce0c5a097ab7ecd0":"cv5I4","efa8155386cc4283":"alt8J","f1c95f846e94e4eb":"eNSHA","6392acd10886f115":"d8Nhf"}],"9qilm":[function(require,module,exports,__globalThis) {
+},{"896ff8d56553f7a":"euskh","6a3257a5fd38b090":"9qilm","e90e9a84ea2f1bd2":"cKY1y","16782d660ac22e0c":"1Gpx3","9a34f23fa53f83f7":"1uuSg","1711a8218ab7e640":"37ZCw","aec0c91a1241db87":"gsKpS","19affa8ce41f090d":"9UN53","a4a723b7297c7152":"eoH60","ce0c5a097ab7ecd0":"cv5I4","efa8155386cc4283":"alt8J","f1c95f846e94e4eb":"eNSHA","6392acd10886f115":"d8Nhf"}],"9qilm":[function(require,module,exports,__globalThis) {
 var process = require("36724de317ab1d63");
 'use strict';
 module.exports = {
@@ -19092,7 +19092,7 @@ if (util && util.inspect && util.inspect.custom) module.exports.prototype[util.i
     return this.constructor.name + ' ' + obj;
 };
 
-},{"af88c2f3f038c5e4":"37ZCw","33fc21125524aa4d":"3E3X6"}],"alt8J":[function(require,module,exports,__globalThis) {
+},{"af88c2f3f038c5e4":"37ZCw","33fc21125524aa4d":"eoH60"}],"alt8J":[function(require,module,exports,__globalThis) {
 'use strict';
 /*<replacement>*/ var pna = require("9f0440d9375d6fc0");
 /*</replacement>*/ // undocumented cb() API, needed for core, not for public API
@@ -23240,7 +23240,7 @@ module.exports = crt;
     };
 })(module, this);
 
-},{"bd440367abe2ded7":"3E3X6"}],"grJlj":[function(require,module,exports,__globalThis) {
+},{"bd440367abe2ded7":"eoH60"}],"grJlj":[function(require,module,exports,__globalThis) {
 'use strict';
 var elliptic = exports;
 elliptic.version = require("e6672bc3ba1c9961").version;
@@ -26044,7 +26044,7 @@ utils.intFromLE = intFromLE;
     };
 })(module, this);
 
-},{"1cf9b8cfa268aab5":"3E3X6"}],"7WocY":[function(require,module,exports,__globalThis) {
+},{"1cf9b8cfa268aab5":"eoH60"}],"7WocY":[function(require,module,exports,__globalThis) {
 'use strict';
 var utils = exports;
 function toArray(msg, enc) {
@@ -33644,7 +33644,7 @@ asn1.encoders = require("5ea4ddb7d1e6fcb9");
     };
 })(module, this);
 
-},{"7f1ee543ef73731a":"3E3X6"}],"34y9Z":[function(require,module,exports,__globalThis) {
+},{"7f1ee543ef73731a":"eoH60"}],"34y9Z":[function(require,module,exports,__globalThis) {
 var asn1 = require("ab532762dbbdc666");
 var inherits = require("64c493c8ea32f1a7");
 var api = exports;
@@ -38007,7 +38007,7 @@ function formatReturnValue(bn, enc, len) {
     };
 })(module, this);
 
-},{"1b9e2dcc2d1e58c5":"3E3X6"}],"g5isx":[function(require,module,exports,__globalThis) {
+},{"1b9e2dcc2d1e58c5":"eoH60"}],"g5isx":[function(require,module,exports,__globalThis) {
 exports.publicEncrypt = require("d84cba4f52311cc8");
 exports.privateDecrypt = require("f9c6d8fbe09b61c");
 exports.privateEncrypt = function privateEncrypt(key, buf) {
@@ -40829,7 +40829,7 @@ module.exports = function xor(a, b) {
     };
 })(module, this);
 
-},{"64c9d23ade4c9eaa":"3E3X6"}],"kngxC":[function(require,module,exports,__globalThis) {
+},{"64c9d23ade4c9eaa":"eoH60"}],"kngxC":[function(require,module,exports,__globalThis) {
 var BN = require("94162e508c4195c3");
 var Buffer = require("1bab2adfd8072b94").Buffer;
 function withPublic(paddedMsg, key) {
@@ -41053,7 +41053,7 @@ function hideSkeletonLoader(containerId = "productsGrid") {
     `).join("");
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"i42Im"}],"a4A6L":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"a4A6L":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "renderProductDetail", ()=>renderProductDetail);
@@ -41706,7 +41706,7 @@ function navigateToProduct(productId) {
     }, `Product ${productId}`, `/product/${productId}`);
 }
 
-},{"dotenv":"5TE9A","@parcel/transformer-js/src/esmodule-helpers.js":"i42Im"}],"d8csY":[function(require,module,exports,__globalThis) {
+},{"dotenv":"5TE9A","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"d8csY":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "renderAbout", ()=>renderAbout);
@@ -42006,7 +42006,7 @@ function createTimelineItem(year, title, description, side) {
   `;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"i42Im"}],"a0XsK":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"a0XsK":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "renderContact", ()=>renderContact);
@@ -42278,6 +42278,6 @@ function createFAQItem(question, answer) {
   `;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"i42Im"}]},["cQQDx","gH3Lb"], "gH3Lb", "parcelRequire94c2", {})
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["duBbf","gH3Lb"], "gH3Lb", "parcelRequire94c2", {})
 
 //# sourceMappingURL=HW5.34df32e0.js.map
