@@ -31,7 +31,7 @@ export function renderHome(): HTMLElement {
               Browse Collections
             </button>
           </div>
-          <div class="flex items-center gap-6 pt-4">
+          <div class="flex flex-wrap items-center gap-6 pt-4">
             <div class="flex items-center gap-2">
               <div class="flex -space-x-2">
               ${Array(4)

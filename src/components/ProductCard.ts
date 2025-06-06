@@ -5,7 +5,7 @@ export default function createProductCard(product: Product): string {
     product.price * (1 - product.discountPercentage / 100);
 
   return `
-    <div class="product-card flex flex-col justify-between dark:bg-gray-800/50 rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.2)]
+    <div class="product-card flex flex-col justify-between bg-transparent dark:bg-gray-800/50 rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.2)]
           hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:shadow-[#1649A1]/20 transition-all duration-500 group hover:border-[#1649A1]/20 cursor-pointer"
           data-product-id="${product.id}">
       <a href="/product/${
@@ -13,7 +13,10 @@ export default function createProductCard(product: Product): string {
       }" data-link class="flex flex-col justify-between">
         <div class="relative overflow-hidden aspect-square">
           <img 
-            src="${product.thumbnail}" 
+            src="${
+              product.thumbnail ||
+              "https://storage.googleapis.com/proudcity/mebanenc/uploads/2021/03/placeholder-image.png"
+            }" 
             alt="${product.title}"
             class="product-image w-full h-full object-cover transition-transform duration-500"
             loading="lazy"

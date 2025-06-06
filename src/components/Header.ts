@@ -52,7 +52,7 @@ export function Header(): HTMLElement {
           
           <!-- Logo -->
           <div class="flex-shrink-0 z-50">
-            <a href="/" class="flex items-center space-x-2 group">
+            <a href="/" class="flex items-center space-x-2 group" data-link>
               <img src="${
                 darkMode
                   ? "https://i.imgur.com/URPUqbe.png"
@@ -75,7 +75,7 @@ export function Header(): HTMLElement {
                              hover:text-blue-600
                             dark:text-gray-300 dark:hover:text-blue-400 ${
                               activeNav ? "text-black" : "text-gray-500"
-                            }">
+                            }" data-link>
                     ${link.name}
                     <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#F35F25] dark:bg-blue-400 
                                 transition-all duration-300 group-hover:w-full
@@ -138,9 +138,11 @@ export function Header(): HTMLElement {
             </button>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-toggle" class="lg:hidden p-2 rounded-lg transition-all duration-200
-                       hover:bg-gray-100
-                      dark:text-gray-300 dark:hover:bg-gray-700">
+            <button id="mobile-toggle" class=lg:hidden p-2 rounded-lg transition-all duration-200
+                       hover:bg-gray-100 
+                      dark:text-gray-300 dark:hover:bg-gray-700  ${
+                        activeNav ? "text-black" : "text-gray-500"
+                      }"">
               <div class="w-6 h-6 flex flex-col justify-center space-y-1">
                 <span class="block h-0.5 bg-current transition-all duration-300 ${
                   toggleBtn ? "rotate-45 translate-y-1.5" : ""
@@ -170,13 +172,13 @@ export function Header(): HTMLElement {
                 (link) => `
               <a href="${link.href}" 
                  class="block py-3 px-4 rounded-lg font-medium transition-all duration-200
-                        text-white hover:text-blue-600 hover:bg-blue-50
+                         hover:text-blue-600 hover:bg-blue-50
                         dark:text-gray-300 dark:hover:text-blue-400 dark:hover:bg-gray-700
                         ${
                           window.location.pathname === link.href
-                            ? "text-blue-600 bg-[#1649A1] dark:text-blue-400 dark:bg-gray-700"
+                            ? "text-white bg-[#1649A1] dark:text-blue-400 dark:bg-gray-700"
                             : ""
-                        }"
+                        } &&  ${activeNav ? "text-black" : "text-gray-500"}""
                  data-link>
                 ${link.name}
               </a>

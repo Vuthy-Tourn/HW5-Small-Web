@@ -14,9 +14,9 @@ export function renderShop(): HTMLElement {
   let isLoading = false;
 
   div.innerHTML = `
-    <div class="min-h-screen dark:bg-gradient-to-br dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <div class="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       <!-- Hero Section -->
-      <section class="relative overflow-hidden py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+      <section class="relative overflow-hidden py-24 px-4 sm:px-6 lg:px-8">
         <div class="absolute inset-0 opacity-20">
           <div class="absolute inset-0" style="background-image: url('https://grainy-gradients.vercel.app/noise.svg')"></div>
         </div>
@@ -100,7 +100,7 @@ export function renderShop(): HTMLElement {
       </section>
 
       <!-- Products Section -->
-      <section class="py-8 px-4 sm:px-6 lg:px-8">
+      <section class="py-8 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
         <div class="max-w-7xl mx-auto gap-3">
           <!-- Products Grid -->
           <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

@@ -1244,6 +1244,9 @@
   .text-blue-700 {
     color: var(--color-blue-700);
   }
+  .text-gray-200 {
+    color: var(--color-gray-200);
+  }
   .text-gray-300 {
     color: var(--color-gray-300);
   }
