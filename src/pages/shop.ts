@@ -35,7 +35,7 @@ export function renderShop(): HTMLElement {
           </div>
           
           <!-- Search and Filter Section -->
-          <div class="bg-gray-800/50 rounded-2xl backdrop-blur-sm border border-gray-700/50 p-6 mb-8">
+          <div class="bg-gray-800/50 rounded-2xl backdrop-blur-sm border border-gray-700/50 p-6 mb-8" data-aos="fade-up">
             <div class="flex flex-col lg:flex-row gap-4">
               <!-- Search Bar -->
               <div class="flex-1">
@@ -141,45 +141,53 @@ export function renderShop(): HTMLElement {
 
 
   // Load products from DummyJSON API
-  async function loadProducts(searchQuery?: string) {
-    try {
-      isLoading = true;
-      showSkeletonLoader();
+ async function loadProducts(searchQuery?: string) {
+   try {
+     isLoading = true;
+     showSkeletonLoader();
 
-      const limit = 200;
-      const baseUrl = process.env.BASE_URL;
-      let url = `${baseUrl}/?limit=${limit}`;
-      if (searchQuery && searchQuery.trim()) {
-        url = `${baseUrl}/search?q=${encodeURIComponent(
-          searchQuery
-        )}&limit${limit}`;
-      }
+     const minLoadingTime = 1000; // 1.5 seconds
+     const startTime = Date.now();
 
-      const response = await fetch(url);
-      const data: ProductsResponse = await response.json();
+     // Load products
+     const productsPromise = (async () => {
+       const limit = 200;
+       const baseUrl = process.env.BASE_URL;
+       let url = `${baseUrl}/?limit=${limit}`;
+       if (searchQuery && searchQuery.trim()) {
+         url = `${baseUrl}/search?q=${encodeURIComponent(
+           searchQuery
+         )}&limit${limit}`;
+       }
 
-      if (searchQuery && searchQuery.trim()) {
-        // For search results, don't update allProducts, just filteredProducts
-        filteredProducts = data.products;
-      } else {
-        // For initial load, update both
-        allProducts = data.products;
-        filteredProducts = [...allProducts];
+       const response = await fetch(url);
+       return await response.json();
+     })();
 
-        // Extract unique categories only on initial load
-        categories = [...new Set(allProducts.map((p) => p.category))].sort();
-        populateCategories();
-      }
+     // Wait for both minimum time and products to load
+     const [data] = await Promise.all([
+       productsPromise,
+       new Promise((resolve) => setTimeout(resolve, minLoadingTime)),
+     ]);
 
-      renderProducts();
-      setupPagination();
-    } catch (error) {
-      console.error("Error loading products:", error);
-      showError();
-    } finally {
-      isLoading = false;
-    }
-  }
+     if (searchQuery && searchQuery.trim()) {
+       filteredProducts = data.products;
+     } else {
+       allProducts = data.products;
+       filteredProducts = [...allProducts];
+       categories = [...new Set(allProducts.map((p) => p.category))].sort();
+       populateCategories();
+     }
+
+     renderProducts();
+     setupPagination();
+   } catch (error) {
+     console.error("Error loading products:", error);
+     showError();
+   } finally {
+     isLoading = false;
+   }
+ }
 
   // Populate category dropdown
   function populateCategories() {
@@ -222,7 +230,7 @@ export function renderShop(): HTMLElement {
         }
         currentPage = 1;
         applyLocalFilters();
-      }, 2000);
+      }, 700);
     });
 
     categoryFilter.addEventListener("change", applyLocalFilters);

@@ -48,7 +48,7 @@ function generateSkeletonItems(count: number): string {
     .fill(0)
     .map(
       () => `
-      <div class="product-card flex flex-col justify-between dark:bg-gray-800/50 rounded-2xl overflow-hidden">
+      <div class="product-card flex flex-col justify-between dark:bg-gray-800/50 rounded-2xl overflow-hidden" data-aos="fade-up">
         <div class="relative overflow-hidden aspect-square bg-gray-200 dark:bg-gray-700/50 animate-pulse"></div>
         
         <div class="px-6 py-4 space-y-3">

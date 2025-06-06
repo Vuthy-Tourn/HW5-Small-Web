@@ -43,7 +43,7 @@ export function renderContact(): HTMLElement {
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <!-- Contact Form -->
-          <div class="bg-gradient-to-br from-[#1649A1]/5 to-[#F35F25]/5 p-8 rounded-2xl border border-[#1649A1]/20">
+          <div class="bg-gradient-to-br from-[#1649A1]/5 to-[#F35F25]/5 p-8 rounded-2xl border border-[#1649A1]/20" data-aos="fade-up-right">
             <div class="mb-8">
               <h2 class="text-3xl font-bold text-[#1649A1] mb-4">Send us a Message</h2>
               <p class="text-gray-600 dark:text-gray-300">
@@ -55,7 +55,7 @@ export function renderContact(): HTMLElement {
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label for="firstName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    First Name *
+                    First Name <span class="text-red-600">*</span>
                   </label>
                   <input 
                     type="text" 
@@ -68,7 +68,7 @@ export function renderContact(): HTMLElement {
                 </div>
                 <div>
                   <label for="lastName" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Last Name *
+                    Last Name <span class="text-red-600">*</span>
                   </label>
                   <input 
                     type="text" 
@@ -83,7 +83,7 @@ export function renderContact(): HTMLElement {
               
               <div>
                 <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Email Address *
+                  Email Address <span class="text-red-600">*</span>
                 </label>
                 <input 
                   type="email" 
@@ -97,7 +97,7 @@ export function renderContact(): HTMLElement {
               
               <div>
                 <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Subject *
+                  Subject <span class="text-red-600">*</span>
                 </label>
                 <select 
                   id="subject" 
@@ -117,7 +117,7 @@ export function renderContact(): HTMLElement {
               
               <div>
                 <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Message *
+                  Message
                 </label>
                 <textarea 
                   id="message" 
@@ -235,7 +235,7 @@ export function renderContact(): HTMLElement {
           </p>
         </div>
         
-        <div class="bg-gradient-to-br from-[#1649A1]/10 to-[#F35F25]/10 rounded-2xl p-8 border border-[#1649A1]/20">
+        <div class="bg-gradient-to-br from-[#1649A1]/10 to-[#F35F25]/10 rounded-2xl p-8 border border-[#1649A1]/20" data-aos="fade-up">
           <div class="aspect-video bg-gray-200 dark:bg-gray-700 rounded-xl overflow-hidden">
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.631404683731!2d104.89921187547291!3d11.57825984389149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951e96d257a6f%3A0x6b66703c5fc0c7cc!2sScience%20and%20Technology%20Advanced%20Development%20Co.%2C%20Ltd.!5e0!3m2!1sen!2skh!4v1749207996590!5m2!1sen!2skh" 
@@ -328,7 +328,7 @@ function createContactCard(
   color: string
 ): string {
   return `
-    <div class="bg-white dark:bg-gray-800/50 p-6 rounded-2xl hover:shadow-lg hover:shadow-[${color}]/10 transition-all duration-300 group border border-gray-200 dark:border-gray-700/50 hover:border-[${color}]/30">
+    <div class="bg-white dark:bg-gray-800/50 p-6 rounded-2xl hover:shadow-lg hover:shadow-[${color}]/10 transition-all duration-300 group border border-gray-200 dark:border-gray-700/50 hover:border-[${color}]/30" data-aos="fade-up-left">
       <div class="flex items-start gap-4">
         <span class="text-3xl group-hover:text-[${color}] transition-colors duration-300">${icon}</span>
         <div>
@@ -343,7 +343,7 @@ function createContactCard(
 
 function createFAQItem(question: string, answer: string): string {
   return `
-    <div class="faq-item bg-white dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700/50 overflow-hidden transition-all duration-200">
+    <div class="faq-item bg-white dark:bg-gray-800/50 rounded-2xl border border-gray-200 dark:border-gray-700/50 overflow-hidden transition-all duration-200" data-aos="fade-up-right">
       <div class="p-6 flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700/30">
         <h3 class="text-lg font-semibold text-[#1649A1] dark:text-[#5EA1FF]">${question}</h3>
         <span class="faq-icon text-2xl text-[#F35F25] font-bold">+</span>

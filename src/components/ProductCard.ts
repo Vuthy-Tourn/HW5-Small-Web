@@ -7,7 +7,7 @@ export default function createProductCard(product: Product): string {
   return `
     <div class="product-card flex flex-col justify-between bg-transparent dark:bg-gray-800/50 rounded-2xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_24px_rgba(0,0,0,0.2)]
           hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:shadow-[#1649A1]/20 transition-all duration-500 group hover:border-[#1649A1]/20 cursor-pointer"
-          data-product-id="${product.id}">
+          data-product-id="${product.id}" data-aos="fade-up">
       <a href="/product/${
         product.id
       }" data-link class="flex flex-col justify-between">

@@ -37,8 +37,8 @@ export function renderAbout(): HTMLElement {
           </div>
         </div>
         
-        <div class="lg:w-1/2 flex justify-center animate-float">
-          <div class="relative">
+        <div class="lg:w-1/2 flex justify-center animate-float" >
+          <div class="relative" data-aos="fade-left">
             <div class="absolute -inset-4 bg-gradient-to-r from-[#1649A1] to-[#F35F25] rounded-3xl blur-xl opacity-30"></div>
             <div class="relative bg-gray-800/50 rounded-2xl backdrop-blur-sm border border-gray-700/50 p-8">
               <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
@@ -69,7 +69,7 @@ export function renderAbout(): HTMLElement {
         </div>
         
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div class="bg-gradient-to-br from-[#1649A1]/10 to-[#F35F25]/10 p-8 rounded-2xl border border-[#1649A1]/20">
+          <div class="bg-gradient-to-br from-[#1649A1]/10 to-[#F35F25]/10 p-8 rounded-2xl border border-[#1649A1]/20" data-aos="fade-up-right">
             <div class="w-16 h-16 bg-[#1649A1] rounded-2xl flex items-center justify-center mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -81,7 +81,7 @@ export function renderAbout(): HTMLElement {
             </p>
           </div>
           
-          <div class="bg-gradient-to-br from-[#F35F25]/10 to-[#1649A1]/10 p-8 rounded-2xl border border-[#F35F25]/20">
+          <div class="bg-gradient-to-br from-[#F35F25]/10 to-[#1649A1]/10 p-8 rounded-2xl border border-[#F35F25]/20" data-aos="fade-up-left">
             <div class="w-16 h-16 bg-[#F35F25] rounded-2xl flex items-center justify-center mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -112,7 +112,7 @@ export function renderAbout(): HTMLElement {
           </p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up">
           ${createValueCard(
             "Quality First",
             "We never compromise on quality. Every product is carefully selected and tested to meet our high standards.",
@@ -165,7 +165,7 @@ export function renderAbout(): HTMLElement {
           </p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" data-aos="fade-up">
           ${createTeamCard(
             "Sarah Johnson",
             "Founder & CEO",
@@ -255,7 +255,7 @@ export function renderAbout(): HTMLElement {
     </section>
 
     <!-- CTA Section -->
-    <section class="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gray-900">
+    <section class="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gray-900" data-aos="fade-up-right">
       <div class="absolute inset-0 bg-gradient-to-r from-[#1649A1]/20 to-[#F35F25]/20"></div>
       <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
       
@@ -385,7 +385,7 @@ function createTimelineItem(
   return `
     <div class="timeline-item flex items-center ${
       isLeft ? "justify-start" : "justify-end"
-    }">
+    }" data-aos="fade-up">
       <div class="w-1/2 ${isLeft ? "pr-8 text-right" : "pl-8"}">
         <div class="bg-white dark:bg-gray-800/50 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700/50">
           <div class="text-2xl font-bold text-[#F35F25] mb-2">${year}</div>

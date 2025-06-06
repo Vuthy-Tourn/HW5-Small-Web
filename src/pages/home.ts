@@ -60,7 +60,7 @@ export function renderHome(): HTMLElement {
         </div>
         
         <div class="lg:w-1/2 flex justify-center animate-float">
-          <div class="relative">
+          <div class="relative" data-aos="fade-left">
             <div class="absolute -inset-4 bg-gradient-to-r from-[#1649A1] to-[#F35F25] rounded-3xl blur-xl opacity-30"></div>
             <div class="relative grid grid-cols-2 gap-4 p-4 bg-gray-800/50 rounded-2xl backdrop-blur-sm border border-gray-700/50">
               <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
@@ -89,7 +89,7 @@ export function renderHome(): HTMLElement {
           <p class="text-gray-400">Discover our handpicked collections for every lifestyle</p>
         </div>
         
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6" data-aos="fade-up">
           ${createCategoryCard(
             "Fashion",
             "https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
@@ -127,7 +127,7 @@ export function renderHome(): HTMLElement {
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Feature 1 -->
-          <div class="bg-[#1649A1]/30 dark:bg-gray-700/30 p-8 rounded-2xl hover:shadow-lg hover:shadow-emerald-500/10 transition-all duration-500 group">
+          <div class="bg-[#1649A1]/30 dark:bg-gray-700/30 p-8 rounded-2xl hover:shadow-lg hover:shadow-emerald-500/10 transition-all duration-500 group" data-aos="fade-up-right">
             <div class="w-14 h-14 bg-emerald-900/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#1649A1]/30 transition-all duration-500 backdrop-blur-sm">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#F35F25] group-hover:text-[#f33a25]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -146,7 +146,7 @@ export function renderHome(): HTMLElement {
           </div>
           
           <!-- Feature 2 -->
-          <div class="bg-[#1649A1]/30 dark:bg-gray-700/30  p-8 rounded-2xl hover:shadow-lg hover:shadow-emerald-500/10 transition-all duration-500 group">
+          <div class="bg-[#1649A1]/30 dark:bg-gray-700/30  p-8 rounded-2xl hover:shadow-lg hover:shadow-emerald-500/10 transition-all duration-500 group" data-aos="fade-up">
             <div class="w-14 h-14 bg-emerald-900/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#1649A1]/30 transition-all duration-500 backdrop-blur-sm">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#F35F25] group-hover:text-[#f33a25de]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -165,7 +165,7 @@ export function renderHome(): HTMLElement {
           </div>
           
           <!-- Feature 3 -->
-          <div class="bg-[#1649A1]/30 dark:bg-gray-700/30 p-8 rounded-2xl hover:shadow-lg hover:shadow-emerald-500/10 transition-all duration-500 group">
+          <div class="bg-[#1649A1]/30 dark:bg-gray-700/30 p-8 rounded-2xl hover:shadow-lg hover:shadow-emerald-500/10 transition-all duration-500 group" data-aos="fade-up-left">
             <div class="w-14 h-14 bg-emerald-900/20 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#1649A1]/30 transition-all duration-500 backdrop-blur-sm">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-[#F35F25] group-hover:text-[#f33a25de]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
@@ -237,7 +237,7 @@ export function renderHome(): HTMLElement {
           </p>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-aos="fade-up">
           ${createTestimonialCard(
             "Amazing quality and fast shipping! The dress I ordered exceeded my expectations.",
             "Sarah M.",
