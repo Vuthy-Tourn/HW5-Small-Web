@@ -1,10 +1,13 @@
 {
-  "build": {
-    "env": {},
-    "commands": {
-      "build": "npx parcel build src/index.html --dist-dir dist"
-    },
-    "outputDirectory": "dist"
-  },
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+   "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ],
+  "buildCommand": "npx parcel build src/index.html --dist-dir dist",
+  "outputDirectory": "dist"
 }
